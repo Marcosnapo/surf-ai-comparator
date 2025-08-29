@@ -6,6 +6,29 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
+print("--- INICIANDO ARRANQUE DE LA APLICACIÓN ---")
+
+# --- 1. Carga y Configuración de la API Key ---
+print("Paso 1: Cargando variables de entorno...")
+load_dotenv()
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
+# Verificamos que la API Key se haya cargado
+if not GOOGLE_API_KEY:
+    print("ERROR FATAL: GOOGLE_API_KEY no encontrada.")
+    raise ValueError("No se encontró la GOOGLE_API_KEY en el archivo .env")
+
+print("Paso 2: Clave API encontrada. Configurando cliente de IA...")
+genai.configure(api_key=GOOGLE_API_KEY)
+
+print("Paso 3: Creando modelo generativo...")
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
+
+print("Paso 4: Creando instancia de FastAPI...")
+app = FastAPI()
+
+print("--- ARRANQUE DE LA APLICACIÓN COMPLETADO CON ÉXITO ---")
+
 # --- Carga y Configuración de la API Key ---
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
