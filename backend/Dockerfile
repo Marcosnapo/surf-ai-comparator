@@ -15,3 +15,5 @@ COPY . .
 
 # 6. Exponer el puerto que usará FastAPI
 EXPOSE 8000
+
+CMD ["sleep", "infinity"]
