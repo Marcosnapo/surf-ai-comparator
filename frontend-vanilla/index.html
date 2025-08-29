@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surf AI Comparator - Vanilla JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Surf AI Advisor 🏄</h1>
+        <p>Vanilla JS Version</p>
+
+        <form id="surf-form">
+            <div class="form-group">
+                <label for="wave-size">Tamaño de la Ola:</label>
+                <select id="wave-size" name="wave-size">
+                    <option value="Pequeñas">Pequeñas</option>
+                    <option value="Medianas">Medianas</option>
+                    <option value="Grandes">Grandes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="wind-condition">Condición del Viento:</label>
+                <select id="wind-condition" name="wind-condition">
+                    <option value="Sin viento">Sin viento</option>
+                    <option value="Suave">Suave</option>
+                    <option value="Fuerte">Fuerte</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="advice-type">Tipo de Consejo:</label>
+                <select id="advice-type" name="advice-type">
+                    <option value="Análisis Rápido">Análisis Rápido</option>
+                    <option value="Consejos Técnicos">Consejos Técnicos</option>
+                    <option value="Plan de Seguridad">Plan de Seguridad</option>
+                </select>
+            </div>
+
+            <button type="submit">Obtener Recomendación</button>
+        </form>
+
+        <div id="loading-spinner" class="hidden"></div>
+
+        <article id="response-container" class="hidden">
+            <h2>Recomendación del Guru:</h2>
+            <p id="recommendation-text"></p>
+            <h3>Explicación:</h3>
+            <p id="explanation-text"></p>
+            <h3>Tips:</h3>
+            <ul id="tips-list"></ul>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
