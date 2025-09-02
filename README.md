@@ -73,13 +73,13 @@ Para Vanilla JS:
 
 Bash
 
-# (Necesitas tener 'serve' instalado: npm install -g serve)
+(Necesitas tener 'serve' instalado: npm install -g serve)
 cd frontend-vanilla
 serve .
 Para React o Vue:
 
 Bash
 
-# cd frontend-react O cd frontend-vue
+cd frontend-react O cd frontend-vue
 npm install
 npm run dev
